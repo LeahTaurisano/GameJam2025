@@ -135,6 +135,11 @@ public class PlayerController : MonoBehaviour
             canDash = true;
             canBubble = true;
         }
+        else if (collision.gameObject.CompareTag("BubbleBounce"))
+        {
+            ChangeState(PlayerState.Bouncing);
+            rb.linearVelocityY = jumpForce;
+        }
     }
 
     private void Move()
