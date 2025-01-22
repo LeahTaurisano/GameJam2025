@@ -8,12 +8,17 @@ public class PlayerController : MonoBehaviour
     //Speed we set
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashDuration;
+    [Space]
     [SerializeField] private GameObject bubbleObject;
     [SerializeField] private float bubbleSpeed;
     [SerializeField] private float bubbleMoveSpeedCap;
     [SerializeField] private float bubbleFloatSpeed;
+    [SerializeField] private float bubbleDuration;
+    [SerializeField] private float dashBubblePenalty;
+    [Space]
     [SerializeField] private float velocityDecay;
-    [SerializeField] private float dashDuration;
 
     enum PlayerState
     {
@@ -33,6 +38,7 @@ public class PlayerController : MonoBehaviour
 
     private bool tryBubble = false;
     private bool canBubble = true;
+    private float bubbleTimer = 0.0f;
 
     private float moveInputX = 0.0f;
     private float moveDirX = 1.0f;
@@ -54,6 +60,15 @@ public class PlayerController : MonoBehaviour
     public void MoveInput(InputAction.CallbackContext context)
     {
         moveInputX = context.ReadValue<Vector2>().x;
+        if (moveInputX < 0)
+        {
+            moveInputX = -1;
+        }
+        else if (moveInputX > 0)
+        {
+            moveInputX = 1;
+        }
+   
     }
     public void JumpInput(InputAction.CallbackContext context)
     {
@@ -82,8 +97,7 @@ public class PlayerController : MonoBehaviour
             }
             isDashing = false;
             rb.gravityScale = gravityScale;
-
-                xVel /= 4.0f;
+            xVel /= 4.0f;
 
             if (CompareState(PlayerState.Grounded))
             {
@@ -113,12 +127,13 @@ public class PlayerController : MonoBehaviour
         return currentState == state;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground") && !CompareState(PlayerState.Bubbled))
+        if (collision.gameObject.CompareTag("Ground") && !CompareState(PlayerState.Bubbled))
         {
             ChangeState(PlayerState.Grounded);
             canDash = true;
+            canBubble = true;
         }
     }
 
@@ -159,17 +174,32 @@ public class PlayerController : MonoBehaviour
     {
         if (tryDash && canDash)
         {
-            xVel = moveDirX * moveSpeed * 3;
+            xVel = moveDirX * moveSpeed * dashSpeed;
             canDash = false;
             isDashing = true;
             dashTimer = 0.0f;
+
+            if (CompareState(PlayerState.Bubbled))
+            {
+                bubbleTimer += dashBubblePenalty;
+            }
         }
         tryDash = false;
     }
 
     private void Bubble()
     {
-        if (tryBubble && canBubble)
+        if (CompareState(PlayerState.Bubbled))
+        {
+            bubbleTimer += Time.fixedDeltaTime;
+            if (bubbleTimer > bubbleDuration)
+            {
+                bubbleObject.SetActive(false);
+                ChangeState(PlayerState.Airborne);
+                bubbleTimer = 0.0f;
+            }
+        }
+        else if (tryBubble && canBubble)
         {
             bubbleObject.SetActive(true);
             ChangeState(PlayerState.Bubbled);
