@@ -8,14 +8,17 @@ public class PlayerController : MonoBehaviour
     //Speed we set
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashDuration;
+    [Space]
     [SerializeField] private GameObject bubbleObject;
     [SerializeField] private float bubbleSpeed;
     [SerializeField] private float bubbleMoveSpeedCap;
     [SerializeField] private float bubbleFloatSpeed;
-    [SerializeField] private float velocityDecay;
-    [SerializeField] private float dashDuration;
-    [SerializeField] private float dashBubblePenalty;
     [SerializeField] private float bubbleDuration;
+    [SerializeField] private float dashBubblePenalty;
+    [Space]
+    [SerializeField] private float velocityDecay;
 
     enum PlayerState
     {
@@ -57,6 +60,15 @@ public class PlayerController : MonoBehaviour
     public void MoveInput(InputAction.CallbackContext context)
     {
         moveInputX = context.ReadValue<Vector2>().x;
+        if (moveInputX < 0)
+        {
+            moveInputX = -1;
+        }
+        else if (moveInputX > 0)
+        {
+            moveInputX = 1;
+        }
+   
     }
     public void JumpInput(InputAction.CallbackContext context)
     {
@@ -162,7 +174,7 @@ public class PlayerController : MonoBehaviour
     {
         if (tryDash && canDash)
         {
-            xVel = moveDirX * moveSpeed * 3;
+            xVel = moveDirX * moveSpeed * dashSpeed;
             canDash = false;
             isDashing = true;
             dashTimer = 0.0f;
