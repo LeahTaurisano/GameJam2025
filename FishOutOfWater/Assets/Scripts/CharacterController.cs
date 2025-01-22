@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float bubbleFloatSpeed;
     [SerializeField] private float velocityDecay;
     [SerializeField] private float dashDuration;
+    [SerializeField] private float dashBubblePenalty;
+    [SerializeField] private float bubbleDuration;
 
     enum PlayerState
     {
@@ -33,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private bool tryBubble = false;
     private bool canBubble = true;
+    private float bubbleTimer = 0.0f;
 
     private float moveInputX = 0.0f;
     private float moveDirX = 1.0f;
@@ -82,8 +85,7 @@ public class PlayerController : MonoBehaviour
             }
             isDashing = false;
             rb.gravityScale = gravityScale;
-
-                xVel /= 4.0f;
+            xVel /= 4.0f;
 
             if (CompareState(PlayerState.Grounded))
             {
@@ -113,12 +115,13 @@ public class PlayerController : MonoBehaviour
         return currentState == state;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground") && !CompareState(PlayerState.Bubbled))
+        if (collision.gameObject.CompareTag("Ground") && !CompareState(PlayerState.Bubbled))
         {
             ChangeState(PlayerState.Grounded);
             canDash = true;
+            canBubble = true;
         }
     }
 
@@ -163,13 +166,28 @@ public class PlayerController : MonoBehaviour
             canDash = false;
             isDashing = true;
             dashTimer = 0.0f;
+
+            if (CompareState(PlayerState.Bubbled))
+            {
+                bubbleTimer += dashBubblePenalty;
+            }
         }
         tryDash = false;
     }
 
     private void Bubble()
     {
-        if (tryBubble && canBubble)
+        if (CompareState(PlayerState.Bubbled))
+        {
+            bubbleTimer += Time.fixedDeltaTime;
+            if (bubbleTimer > bubbleDuration)
+            {
+                bubbleObject.SetActive(false);
+                ChangeState(PlayerState.Airborne);
+                bubbleTimer = 0.0f;
+            }
+        }
+        else if (tryBubble && canBubble)
         {
             bubbleObject.SetActive(true);
             ChangeState(PlayerState.Bubbled);
