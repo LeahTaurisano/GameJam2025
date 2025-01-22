@@ -1,3 +1,4 @@
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,10 +9,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
     [SerializeField] private GameObject bubbleObject;
-    [SerializeField] private float bubbleSpeedMod;
+    [SerializeField] private float bubbleSpeed;
     [SerializeField] private float bubbleMoveSpeedCap;
     [SerializeField] private float bubbleFloatSpeed;
     [SerializeField] private float velocityDecay;
+    [SerializeField] private float dashDuration;
 
     enum PlayerState
     {
@@ -22,19 +24,30 @@ public class PlayerController : MonoBehaviour
         Bouncing
     };
     private PlayerState currentState = PlayerState.Grounded;
-    private bool canBubble = true;
     private bool tryJump = false;
+
+    private bool tryDash = false;
+    private bool canDash = true;
+    private bool isDashing = false;
+    private float dashTimer = 0.0f;
+
     private bool tryBubble = false;
-    private float moveInputX;
+    private bool canBubble = true;
+
+    private float moveInputX = 0.0f;
+    private float moveDirX = 1.0f;
 
     private float xVel = 0.0f;
     private float yVel = 0.0f;
+
+    private float gravityScale;
 
     private Rigidbody2D rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        gravityScale = rb.gravityScale;
     }
 
     #region Movement
@@ -46,6 +59,10 @@ public class PlayerController : MonoBehaviour
     {
         tryJump = context.performed;
     }    
+    public void DashInput(InputAction.CallbackContext context)
+    {
+        tryDash = context.performed;
+    }    
     public void BubbleInput(InputAction.CallbackContext context)
     {
         tryBubble = context.performed;
@@ -54,6 +71,26 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         xVel = rb.linearVelocityX * velocityDecay;
+
+        if (isDashing)
+        {
+            dashTimer += Time.fixedDeltaTime;
+            if (dashTimer < dashDuration)
+            {
+                rb.gravityScale = 0;
+                return;
+            }
+            isDashing = false;
+            rb.gravityScale = gravityScale;
+
+                xVel /= 4.0f;
+
+            if (CompareState(PlayerState.Grounded))
+            {
+                canDash = true;
+            }
+        }
+
         if (CompareState(PlayerState.Grounded))
         {
             xVel = 0.0f;
@@ -61,6 +98,7 @@ public class PlayerController : MonoBehaviour
         yVel = rb.linearVelocityY;
         Move();
         Jump();
+        Dash();
         Bubble();
         rb.linearVelocity = new Vector2(xVel, yVel);
     }
@@ -77,28 +115,34 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground"))
+        if(collision.gameObject.CompareTag("Ground") && !CompareState(PlayerState.Bubbled))
         {
             ChangeState(PlayerState.Grounded);
+            canDash = true;
         }
     }
 
     private void Move()
     {
         bool isMoveInput = moveInputX != 0.0f;
-        if (isMoveInput && !CompareState(PlayerState.Bubbled))
+
+        if (isMoveInput)
         {
-            xVel = moveInputX * moveSpeed;
+            moveDirX = moveInputX;
+            if (!CompareState(PlayerState.Bubbled))
+            {
+                xVel = moveInputX * moveSpeed;
+            }
         }
 
         if (CompareState(PlayerState.Bubbled))
         {
-            if (isMoveInput)
+            xVel += moveInputX * bubbleSpeed;
+
+            if (yVel < bubbleMoveSpeedCap)
             {
-                xVel += moveInputX * moveSpeed * bubbleSpeedMod;
-                xVel = Mathf.Clamp(xVel, -bubbleMoveSpeedCap, bubbleMoveSpeedCap);
+                yVel += bubbleFloatSpeed * Time.fixedDeltaTime;
             }
-            yVel = bubbleFloatSpeed;
         }
     }
 
@@ -108,8 +152,19 @@ public class PlayerController : MonoBehaviour
         {
             yVel = jumpForce;
             ChangeState(PlayerState.Airborne);
-            tryJump = false;
         }
+        tryJump = false;
+    }    
+    private void Dash()
+    {
+        if (tryDash && canDash)
+        {
+            xVel = moveDirX * moveSpeed * 3;
+            canDash = false;
+            isDashing = true;
+            dashTimer = 0.0f;
+        }
+        tryDash = false;
     }
 
     private void Bubble()
@@ -118,6 +173,8 @@ public class PlayerController : MonoBehaviour
         {
             bubbleObject.SetActive(true);
             ChangeState(PlayerState.Bubbled);
+            canBubble = false;
         }
+        tryBubble = false;
     }
 }
