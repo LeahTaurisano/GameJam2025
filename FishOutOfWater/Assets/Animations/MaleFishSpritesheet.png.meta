@@ -185,7 +185,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_0
+      name: MaleFishSpritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -193,21 +193,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3c0381d226453a810800000000000000
-      internalID: 1775355458754195651
+      spriteID: e483a7a1099679c4faa9db602f7a5bba
+      internalID: -1537365249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_1
+      name: MaleFishSpritesheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -215,21 +215,109 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 78517b2cde9b86fd0800000000000000
-      internalID: -2348422774848547449
+      spriteID: de3fe4d07521f674bb7939f5829e9e21
+      internalID: 1949990513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_2
+      name: MaleFishSpritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 51
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6732312362461b489256dec3c646bc9
+      internalID: -132933061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleFishSpritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 34
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01d3a1900c6fc554dafef8c6c477f452
+      internalID: 1127848597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleFishSpritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 17
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a35bc804981a240aee4a6947968fe4
+      internalID: -1931712126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleFishSpritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57e8157800ee0a46b3e76147169f177
+      internalID: 1940232301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleFishSpritesheet_1
       rect:
         serializedVersion: 2
         x: 16
@@ -237,21 +325,65 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d09c06c79d5cbc240800000000000000
-      internalID: 4813158164660799757
+      spriteID: 6f3a8e73fcc62c2419824cb37071a133
+      internalID: -629644324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_3
+      name: MaleFishSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8b1edcac63d2443809e2b4127f5b93
+      internalID: 134035294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleFishSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aff234c20494ec46b20009e8c22f368
+      internalID: 1174713744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleFishSpritesheet_5
       rect:
         serializedVersion: 2
         x: 16
@@ -259,43 +391,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 37f06ee1f0de30610800000000000000
-      internalID: 1586372142963232627
+      spriteID: 62fe3a04f0036964fa856a6819e0b963
+      internalID: 2026187489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 84
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b243c981f28d71c50800000000000000
-      internalID: 6636010272741667883
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_5
+      name: MaleFishSpritesheet_6
       rect:
         serializedVersion: 2
         x: 32
@@ -303,43 +413,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4879316dc5ac959b0800000000000000
-      internalID: -5090815403688224892
+      spriteID: 2b778267db07b034c990306b0efef428
+      internalID: 1144192118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_6
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 84
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a5197070aaa37f390800000000000000
-      internalID: -7784688928949825190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_7
+      name: MaleFishSpritesheet_7
       rect:
         serializedVersion: 2
         x: 48
@@ -347,21 +435,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ce1691446d24fc520800000000000000
-      internalID: 2724469787615388140
+      spriteID: 6056e39ad7a7ce04ab35dfbc70ff63e8
+      internalID: -87627109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_8
+      name: MaleFishSpritesheet_8
       rect:
         serializedVersion: 2
         x: 64
@@ -369,367 +457,279 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: db13c1a3b189eab00800000000000000
-      internalID: 841777423071326653
+      spriteID: fb4091c7357bbf943aff8a3aef33ef8b
+      internalID: 1863132648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_9
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 51
-        width: 17
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2260e2f19bae256d0800000000000000
-      internalID: -3003079920689740254
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 34
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 915465740d5724420800000000000000
-      internalID: 2612780271238792473
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_11
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 51
-        width: 17
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 46290a224fea2fcd0800000000000000
-      internalID: -2525764077425225116
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_12
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 34
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 662e5a9def2095100800000000000000
-      internalID: 97112160561652326
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_13
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 51
-        width: 17
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 113d0b60e4bffe0d0800000000000000
-      internalID: -3391215681848421615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_14
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 34
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d195a6eb52867a30800000000000000
-      internalID: 4212697832674922965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_15
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 34
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 58e0ec79239692170800000000000000
-      internalID: 8154164266347138693
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_16
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 17
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 725fffea897cdf0e0800000000000000
-      internalID: -2234410381520931545
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_17
+      name: MaleFishSpritesheet_10
       rect:
         serializedVersion: 2
         x: 17
-        y: 17
-        width: 17
+        y: 51
+        width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f54c31ab8f6f28930800000000000000
-      internalID: 4144146155268457567
+      spriteID: 1bb9169e47c688c4b9c33499c76bd136
+      internalID: 563709352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_18
+      name: MaleFishSpritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 51
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75dd79271483698418c01477a8a3bf0f
+      internalID: 826617160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleFishSpritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 34
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23778a05035b68144aa0ee7a6e5feff8
+      internalID: -418471399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleFishSpritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 34
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1140df02abf6c49ab7ef84aca580a8
+      internalID: -514458853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleFishSpritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 34
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7466ff55d7120c2418fb0012847c6862
+      internalID: 100297626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleFishSpritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 17
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857d6a18df9e0884583b5f24a19d8469
+      internalID: -1397800569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleFishSpritesheet_18
       rect:
         serializedVersion: 2
         x: 33
         y: 17
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3cb869974390244689980969dc54db9
+      internalID: -785091355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaleFishSpritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 17
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e7688ddff47026270800000000000000
-      internalID: 8242158308184065662
+      spriteID: dbbc2d9303903a140a9a3ca1611f55e5
+      internalID: -1380954563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_19
+      name: MaleFishSpritesheet_20
       rect:
         serializedVersion: 2
-        x: 48
+        x: 66
         y: 17
-        width: 17
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1309936c668e0b0b0800000000000000
-      internalID: -5714812399023189967
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_20
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 17
-        width: 17
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 13bd44ffa49614b00800000000000000
-      internalID: 811045178734598961
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_21
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 0
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9358cb9fe3a109d50800000000000000
-      internalID: 6741917499953808697
+      spriteID: 631204aae461bf148a6ddbfd25f3ee96
+      internalID: -1294231045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_22
+      name: MaleFishSpritesheet_22
       rect:
         serializedVersion: 2
         x: 17
         y: 0
-        width: 16
+        width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3aa24aafceb229510800000000000000
-      internalID: 1554353118213581475
+      spriteID: f13aa5beb4a0a484ca8ee5c30e0725fa
+      internalID: 570439229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_23
+      name: MaleFishSpritesheet_23
       rect:
         serializedVersion: 2
-        x: 32
+        x: 33
         y: 0
-        width: 16
+        width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a0456a109ab6bb320800000000000000
-      internalID: 2574769985593693194
+      spriteID: f388c8eefeac8cf4f88034fcad3cc7de
+      internalID: -36124008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MaleFishSpritesheetFixed_24
+      name: MaleFishSpritesheet_24
       rect:
         serializedVersion: 2
-        x: 48
+        x: 49
         y: 0
-        width: 16
+        width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e30eb10e259e19040800000000000000
-      internalID: 4652756432206946366
+      spriteID: 1a0b25e5d71d5e24ab3341e179505682
+      internalID: 516494452
       vertices: []
       indices: 
       edges: []
@@ -748,31 +748,31 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MaleFishSpritesheetFixed_0: 1775355458754195651
-      MaleFishSpritesheetFixed_1: -2348422774848547449
-      MaleFishSpritesheetFixed_10: 2612780271238792473
-      MaleFishSpritesheetFixed_11: -2525764077425225116
-      MaleFishSpritesheetFixed_12: 97112160561652326
-      MaleFishSpritesheetFixed_13: -3391215681848421615
-      MaleFishSpritesheetFixed_14: 4212697832674922965
-      MaleFishSpritesheetFixed_15: 8154164266347138693
-      MaleFishSpritesheetFixed_16: -2234410381520931545
-      MaleFishSpritesheetFixed_17: 4144146155268457567
-      MaleFishSpritesheetFixed_18: 8242158308184065662
-      MaleFishSpritesheetFixed_19: -5714812399023189967
-      MaleFishSpritesheetFixed_2: 4813158164660799757
-      MaleFishSpritesheetFixed_20: 811045178734598961
-      MaleFishSpritesheetFixed_21: 6741917499953808697
-      MaleFishSpritesheetFixed_22: 1554353118213581475
-      MaleFishSpritesheetFixed_23: 2574769985593693194
-      MaleFishSpritesheetFixed_24: 4652756432206946366
-      MaleFishSpritesheetFixed_3: 1586372142963232627
-      MaleFishSpritesheetFixed_4: 6636010272741667883
-      MaleFishSpritesheetFixed_5: -5090815403688224892
-      MaleFishSpritesheetFixed_6: -7784688928949825190
-      MaleFishSpritesheetFixed_7: 2724469787615388140
-      MaleFishSpritesheetFixed_8: 841777423071326653
-      MaleFishSpritesheetFixed_9: -3003079920689740254
+      MaleFishSpritesheet_0: -1537365249
+      MaleFishSpritesheet_1: -629644324
+      MaleFishSpritesheet_10: 563709352
+      MaleFishSpritesheet_11: 826617160
+      MaleFishSpritesheet_12: 1127848597
+      MaleFishSpritesheet_13: -418471399
+      MaleFishSpritesheet_14: -514458853
+      MaleFishSpritesheet_15: 100297626
+      MaleFishSpritesheet_16: -1931712126
+      MaleFishSpritesheet_17: -1397800569
+      MaleFishSpritesheet_18: -785091355
+      MaleFishSpritesheet_19: -1380954563
+      MaleFishSpritesheet_2: 134035294
+      MaleFishSpritesheet_20: -1294231045
+      MaleFishSpritesheet_21: 1940232301
+      MaleFishSpritesheet_22: 570439229
+      MaleFishSpritesheet_23: -36124008
+      MaleFishSpritesheet_24: 516494452
+      MaleFishSpritesheet_3: 1174713744
+      MaleFishSpritesheet_4: 1949990513
+      MaleFishSpritesheet_5: 2026187489
+      MaleFishSpritesheet_6: 1144192118
+      MaleFishSpritesheet_7: -87627109
+      MaleFishSpritesheet_8: 1863132648
+      MaleFishSpritesheet_9: -132933061
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
