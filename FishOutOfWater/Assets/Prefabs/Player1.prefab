@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4495289003223336959}
   m_Layer: 6
   m_Name: Bubble
-  m_TagString: Untagged
+  m_TagString: Bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 280236347089439463}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.008, y: 0.143, z: 0}
+  m_LocalPosition: {x: 0.008, y: 0.044, z: 0}
   m_LocalScale: {x: 2.020409, y: 2.020409, z: 2.020409}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -78,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.6650944, g: 0.84965265, b: 1, a: 1}
+  m_Sprite: {fileID: 1974398850317261453, guid: dc1b4daef25a11540a85b467e15a9d72, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -151,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 2524000928770836367}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.013, y: 0.005, z: 0}
+  m_LocalPosition: {x: -0.005, y: 0.005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -320,6 +320,7 @@ MonoBehaviour:
   bubbleDuration: 5
   dashBubblePenalty: 2.5
   velocityDecay: 0.99
+  otherPlayer: {fileID: 0}
 --- !u!114 &6315892122454068990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,7 +475,7 @@ MonoBehaviour:
     m_ActionId: ce436760-6334-41ac-a5ec-cdf0226fd82a
     m_ActionName: 'Player2/Bubble[/Keyboard/r]'
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -631,7 +632,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.00028771162, y: 0.34465757}
+  m_Offset: {x: -0.0007930994, y: 0.34465757}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -641,5 +642,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.4030324, y: 0.70315784}
+  m_Size: {x: 1.3963106, y: 0.70315784}
   m_EdgeRadius: 0
