@@ -49,10 +49,12 @@ public class PlayerController : MonoBehaviour
     private float gravityScale;
 
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
         gravityScale = rb.gravityScale;
     }
 
@@ -63,10 +65,12 @@ public class PlayerController : MonoBehaviour
         if (moveInputX < 0)
         {
             moveInputX = -1;
+            sr.flipX = true;
         }
         else if (moveInputX > 0)
         {
             moveInputX = 1;
+            sr.flipX = false;
         }
    
     }
@@ -129,7 +133,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") && !CompareState(PlayerState.Bubbled))
+        if ((collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Player")) && !CompareState(PlayerState.Bubbled))
         {
             ChangeState(PlayerState.Grounded);
             canDash = true;
