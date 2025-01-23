@@ -144,7 +144,7 @@ public class PlayerController : MonoBehaviour
             canDash = true;
             canBubble = true;
 
-            if (PlayerGlobals.canTeleport == true && PlayerGlobals.PlayerOneZone != PlayerGlobals.PlayerTwoZone)
+            if (PlayerGlobals.canTeleport && PlayerGlobals.PlayerOneZone != PlayerGlobals.PlayerTwoZone)
             {
                 if (this.gameObject.transform.position.y < otherPlayer.gameObject.transform.position.y)
                 {

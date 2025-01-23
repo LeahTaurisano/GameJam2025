@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: e69a8d9b1e8497f4693bd31a25a0fceb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7723975602936426614
+    second: FemaleFishSpritesheetFixed_0
+  - first:
+      213: -7690864893300112104
+    second: FemaleFishSpritesheetFixed_1
+  - first:
+      213: 8594497121411828323
+    second: FemaleFishSpritesheetFixed_2
+  - first:
+      213: -7213988118019708151
+    second: FemaleFishSpritesheetFixed_3
+  - first:
+      213: -4034053738505560875
+    second: FemaleFishSpritesheetFixed_4
+  - first:
+      213: 3999950146995489040
+    second: FemaleFishSpritesheetFixed_5
+  - first:
+      213: 589765861720778538
+    second: FemaleFishSpritesheetFixed_6
+  - first:
+      213: 1737334606229664927
+    second: FemaleFishSpritesheetFixed_7
+  - first:
+      213: -386513323368471348
+    second: FemaleFishSpritesheetFixed_8
+  - first:
+      213: -2706993557906392157
+    second: FemaleFishSpritesheetFixed_9
+  - first:
+      213: 8542146455777697074
+    second: FemaleFishSpritesheetFixed_10
+  - first:
+      213: 8246648158106824402
+    second: FemaleFishSpritesheetFixed_11
+  - first:
+      213: -6507597789145346265
+    second: FemaleFishSpritesheetFixed_12
+  - first:
+      213: -6879527042469067893
+    second: FemaleFishSpritesheetFixed_13
+  - first:
+      213: 7055213379926915865
+    second: FemaleFishSpritesheetFixed_14
+  - first:
+      213: 7312659754076493033
+    second: FemaleFishSpritesheetFixed_15
+  - first:
+      213: 3399577806012091412
+    second: FemaleFishSpritesheetFixed_16
+  - first:
+      213: -1026620613049370053
+    second: FemaleFishSpritesheetFixed_17
+  - first:
+      213: -7412302368777066283
+    second: FemaleFishSpritesheetFixed_18
+  - first:
+      213: -3747780134630948291
+    second: FemaleFishSpritesheetFixed_19
+  - first:
+      213: 2710961598394743929
+    second: FemaleFishSpritesheetFixed_20
+  - first:
+      213: -452142558407580203
+    second: FemaleFishSpritesheetFixed_21
+  - first:
+      213: -5742539730927632968
+    second: FemaleFishSpritesheetFixed_22
+  - first:
+      213: 8715151144054381279
+    second: FemaleFishSpritesheetFixed_23
+  - first:
+      213: -2292960968992092720
+    second: FemaleFishSpritesheetFixed_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8fc03dcc1deec490800000000000000
+      internalID: -7723975602936426614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8150353a02f844590800000000000000
+      internalID: -7690864893300112104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_2
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36a8ed8a899c54770800000000000000
+      internalID: 8594497121411828323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_3
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90beb8b2704c2eb90800000000000000
+      internalID: -7213988118019708151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_4
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dc1a878f792408c0800000000000000
+      internalID: -4034053738505560875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_5
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01900fe477da28730800000000000000
+      internalID: 3999950146995489040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_6
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 84
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a27e4803de44f2800800000000000000
+      internalID: 589765861720778538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_7
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f94ff4c9e904c1810800000000000000
+      internalID: 1737334606229664927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_8
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc4aaa32e24d2aaf0800000000000000
+      internalID: -386513323368471348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 51
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3abf7bb83b3de6ad0800000000000000
+      internalID: -2706993557906392157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 34
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23dddfb71fccb8670800000000000000
+      internalID: 8542146455777697074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_11
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 51
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2de2693aecaf17270800000000000000
+      internalID: 8246648158106824402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_12
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 34
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72fcfdc1a4e50b5a0800000000000000
+      internalID: -6507597789145346265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_13
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 51
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8300faaa920780a0800000000000000
+      internalID: -6879527042469067893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_14
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 34
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91b702d503729e160800000000000000
+      internalID: 7055213379926915865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_15
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 34
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e4560d5d49cb7560800000000000000
+      internalID: 7312659754076493033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c07a9b00abd2f20800000000000000
+      internalID: 3399577806012091412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_17
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a3910edf5b0c1f0800000000000000
+      internalID: -1026620613049370053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_18
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 17
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d8a1458446322990800000000000000
+      internalID: -7412302368777066283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_19
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d328e0bf2d53dfbc0800000000000000
+      internalID: -3747780134630948291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_20
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c3b00e5354f9520800000000000000
+      internalID: 2710961598394743929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_21
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d5a74a1dbaa9b9f0800000000000000
+      internalID: -452142558407580203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_22
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bdbd7d3a866e40b0800000000000000
+      internalID: -5742539730927632968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_23
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fda53396acf62f870800000000000000
+      internalID: 8715151144054381279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFishSpritesheetFixed_24
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd0467b524cd20e0800000000000000
+      internalID: -2292960968992092720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e63d8f7fd207f2444af72c6a5949c225
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FemaleFishSpritesheetFixed_0: -7723975602936426614
+      FemaleFishSpritesheetFixed_1: -7690864893300112104
+      FemaleFishSpritesheetFixed_10: 8542146455777697074
+      FemaleFishSpritesheetFixed_11: 8246648158106824402
+      FemaleFishSpritesheetFixed_12: -6507597789145346265
+      FemaleFishSpritesheetFixed_13: -6879527042469067893
+      FemaleFishSpritesheetFixed_14: 7055213379926915865
+      FemaleFishSpritesheetFixed_15: 7312659754076493033
+      FemaleFishSpritesheetFixed_16: 3399577806012091412
+      FemaleFishSpritesheetFixed_17: -1026620613049370053
+      FemaleFishSpritesheetFixed_18: -7412302368777066283
+      FemaleFishSpritesheetFixed_19: -3747780134630948291
+      FemaleFishSpritesheetFixed_2: 8594497121411828323
+      FemaleFishSpritesheetFixed_20: 2710961598394743929
+      FemaleFishSpritesheetFixed_21: -452142558407580203
+      FemaleFishSpritesheetFixed_22: -5742539730927632968
+      FemaleFishSpritesheetFixed_23: 8715151144054381279
+      FemaleFishSpritesheetFixed_24: -2292960968992092720
+      FemaleFishSpritesheetFixed_3: -7213988118019708151
+      FemaleFishSpritesheetFixed_4: -4034053738505560875
+      FemaleFishSpritesheetFixed_5: 3999950146995489040
+      FemaleFishSpritesheetFixed_6: 589765861720778538
+      FemaleFishSpritesheetFixed_7: 1737334606229664927
+      FemaleFishSpritesheetFixed_8: -386513323368471348
+      FemaleFishSpritesheetFixed_9: -2706993557906392157
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

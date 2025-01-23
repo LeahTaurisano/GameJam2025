@@ -44,7 +44,7 @@ public class CameraFollow : MonoBehaviour
     {
         float currentSize = mCamera.orthographicSize;
         float newFOV = Mathf.Clamp(GetGreatestDistance() * zoomLimit, minZoom, maxZoom);
-        if (currentSize < newFOV && currentSize - newFOV < 0.01f)
+        if ((currentSize > newFOV && currentSize - newFOV < 0.01f) || (currentSize < newFOV && currentSize + 0.01f > newFOV))
         {
             mCamera.orthographicSize = newFOV;
             return;
