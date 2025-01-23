@@ -20,6 +20,11 @@ public class PlayerController : MonoBehaviour
     [Space]
     [SerializeField] private float velocityDecay;
 
+    //Player Teleport Implement
+    [SerializeField] private GameObject otherPlayer;
+    private Vector3 offset = new Vector3( 0.0f, 2.0f, 0.0f );
+
+
     enum PlayerState
     {
         Grounded,
@@ -138,6 +143,15 @@ public class PlayerController : MonoBehaviour
             ChangeState(PlayerState.Grounded);
             canDash = true;
             canBubble = true;
+
+            if (PlayerGlobals.canTeleport == true && PlayerGlobals.PlayerOneZone != PlayerGlobals.PlayerTwoZone)
+            {
+                if (this.gameObject.transform.position.y < otherPlayer.gameObject.transform.position.y)
+                {
+                    otherPlayer.transform.position = this.gameObject.transform.position + offset;
+                    PlayerGlobals.canTeleport = false;
+                }                
+            }            
         }
         else if (collision.gameObject.CompareTag("BubbleBounce"))
         {
