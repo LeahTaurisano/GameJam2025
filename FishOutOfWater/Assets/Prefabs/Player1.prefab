@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 5840129881278034070}
   - component: {fileID: 6945482636802716173}
   - component: {fileID: 123076792648140771}
+  - component: {fileID: 3736333574210365458}
   m_Layer: 7
   m_Name: Player1
   m_TagString: Player
@@ -320,7 +321,10 @@ MonoBehaviour:
   bubbleDuration: 5
   dashBubblePenalty: 2.5
   velocityDecay: 0.99
-  otherPlayer: {fileID: 0}
+  otherPlayer: {fileID: 6563627590508110630, guid: 21f030e712b2e4448bb2dd5fea8e2266, type: 3}
+  myAnimator: {fileID: 3736333574210365458}
+  fallingThreshold: -0.5
+  landingThreshold: -6
 --- !u!114 &6315892122454068990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,3 +648,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.3963106, y: 0.70315784}
   m_EdgeRadius: 0
+--- !u!95 &3736333574210365458
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2561659718654348928}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50e98df67e9f722409044a5750e7cf11, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

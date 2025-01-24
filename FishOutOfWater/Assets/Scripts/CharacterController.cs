@@ -24,6 +24,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject otherPlayer;
     private Vector3 offset = new Vector3( 0.0f, 2.0f, 0.0f );
 
+    //Player Animation Implement
+    [SerializeField] public Animator myAnimator;
+    [SerializeField] public float fallingThreshold = -0.5f;
+    [SerializeField] public float landingThreshold = -6.0f;
+
 
     enum PlayerState
     {
@@ -94,6 +99,11 @@ public class PlayerController : MonoBehaviour
     #endregion
     private void FixedUpdate()
     {
+        if (rb.linearVelocity.y < fallingThreshold)
+        {
+            myAnimator.SetTrigger("Fall");
+        }
+
         xVel = rb.linearVelocityX * velocityDecay;
 
         if (isDashing)
@@ -139,10 +149,26 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if ((collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Player")) && !CompareState(PlayerState.Bubbled))
-        {
+        {           
             ChangeState(PlayerState.Grounded);
             canDash = true;
             canBubble = true;
+
+            if (collision.gameObject.CompareTag("Ground"))
+            {
+                if (rb.linearVelocity.y < landingThreshold)
+                {
+                    myAnimator.SetTrigger("Land");
+                }
+                else
+                {
+                    myAnimator.SetTrigger("SoftLand");
+                }
+            }
+            else if (collision.gameObject.CompareTag("Player"))
+            {
+                myAnimator.SetTrigger("SoftLand");
+            }
 
             if (PlayerGlobals.canTeleport && PlayerGlobals.PlayerOneZone != PlayerGlobals.PlayerTwoZone)
             {
@@ -169,25 +195,31 @@ public class PlayerController : MonoBehaviour
             moveDirX = moveInputX;
             if (!CompareState(PlayerState.Bubbled))
             {
+                myAnimator.SetBool("Run", true);
                 xVel = moveInputX * moveSpeed;
             }
-        }
-
-        if (CompareState(PlayerState.Bubbled))
-        {
-            xVel += moveInputX * bubbleSpeed;
-
-            if (yVel < bubbleMoveSpeedCap)
+            else if (CompareState(PlayerState.Bubbled))
             {
-                yVel += bubbleFloatSpeed * Time.fixedDeltaTime;
+                xVel += moveInputX * bubbleSpeed;
+
+                if (yVel < bubbleMoveSpeedCap)
+                {
+                    yVel += bubbleFloatSpeed * Time.fixedDeltaTime;
+                }
             }
         }
+        else
+        {
+            myAnimator.SetBool("Run", false);
+        }
+
     }
 
     private void Jump()
     {
         if (tryJump && CompareState(PlayerState.Grounded))
         {
+            myAnimator.SetTrigger("Jump");
             yVel = jumpForce;
             ChangeState(PlayerState.Airborne);
         }
@@ -206,6 +238,10 @@ public class PlayerController : MonoBehaviour
             {
                 bubbleTimer += dashBubblePenalty;
             }
+            else
+            {
+                myAnimator.SetTrigger("Dash");
+            }
         }
         tryDash = false;
     }
@@ -219,6 +255,7 @@ public class PlayerController : MonoBehaviour
             {
                 bubbleObject.SetActive(false);
                 ChangeState(PlayerState.Airborne);
+                myAnimator.SetBool("Bubble", false);
                 bubbleTimer = 0.0f;
             }
         }
@@ -226,6 +263,7 @@ public class PlayerController : MonoBehaviour
         {
             bubbleObject.SetActive(true);
             ChangeState(PlayerState.Bubbled);
+            myAnimator.SetBool("Bubble", true);
             canBubble = false;
         }
         tryBubble = false;
