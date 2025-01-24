@@ -4,8 +4,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    
-    //Speed we set
+
+    [SerializeField] private int playerNumber;
+    [Space]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float dashSpeed;
@@ -60,6 +61,26 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
+
+    private void Awake()
+    {
+        GameObject controls = GameObject.FindGameObjectWithTag("Controls");
+        ControlScheme cs = controls.GetComponent<ControlScheme>();
+        PlayerInput pi = GetComponent<PlayerInput>();
+        if (cs.UsingKeyboardControls(playerNumber))
+        {
+            pi.SwitchCurrentControlScheme(Keyboard.current, Mouse.current);
+        }
+        else
+        {
+            if (Gamepad.all.Count >= playerNumber)
+            {
+                pi.SwitchCurrentControlScheme("Gamepad", Gamepad.all[playerNumber - 1]);
+                return;
+            }
+            pi.SwitchCurrentControlScheme(Keyboard.current, Mouse.current);
+        }
+    }
 
     private void Start()
     {
