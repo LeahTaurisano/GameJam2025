@@ -185,23 +185,7 @@ public class PlayerController : MonoBehaviour
         {           
             ChangeState(PlayerState.Grounded);
             canDash = true;
-            canBubble = true;
-
-            /*if (collision.gameObject.CompareTag("Ground"))
-            {
-                if (rb.linearVelocity.y < landingThreshold)
-                {
-                    myAnimator.SetTrigger("Land");
-                }
-                else
-                {
-                    myAnimator.SetTrigger("SoftLand");
-                }
-            }
-            else if (collision.gameObject.CompareTag("Player"))
-            {
-                myAnimator.SetTrigger("SoftLand");
-            }*/
+            canBubble = true;           
 
             if (PlayerGlobals.canTeleport && PlayerGlobals.PlayerOneZone != PlayerGlobals.PlayerTwoZone)
             {
@@ -221,7 +205,7 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        bool isMoveInput = moveInputX != 0.0f;
+        bool isMoveInput = moveInputX >= 0.2f || moveInputX <= -0.2f;
 
         if (isMoveInput)
         {
