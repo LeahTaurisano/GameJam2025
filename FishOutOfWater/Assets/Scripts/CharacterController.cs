@@ -219,21 +219,23 @@ public class PlayerController : MonoBehaviour
                 myAnimator.SetBool("Run", true);
                 xVel = moveInputX * moveSpeed;
             }
-            else if (CompareState(PlayerState.Bubbled))
-            {
-                xVel += moveInputX * bubbleSpeed;
-
-                if (yVel < bubbleMoveSpeedCap)
-                {
-                    yVel += bubbleFloatSpeed * Time.fixedDeltaTime;
-                }
-            }
         }
         else
         {
-            myAnimator.SetBool("Run", false);
+            if (myAnimator.GetBool("Run"))
+            { 
+                myAnimator.SetBool("Run", false);
+            }
         }
+        if (CompareState(PlayerState.Bubbled))
+        {
+            xVel += moveInputX * bubbleSpeed;
 
+            if (yVel < bubbleMoveSpeedCap)
+            {
+                yVel += bubbleFloatSpeed * Time.fixedDeltaTime;
+            }
+        }
     }
 
     private void Jump()
