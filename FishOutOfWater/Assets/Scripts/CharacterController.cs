@@ -120,9 +120,21 @@ public class PlayerController : MonoBehaviour
     #endregion
     private void FixedUpdate()
     {
-        if (rb.linearVelocity.y < fallingThreshold)
+        if (rb.linearVelocity.y < fallingThreshold && !CompareState(PlayerState.Grounded))
         {
-            myAnimator.SetTrigger("Fall");
+            myAnimator.SetBool("Fall", true);
+            if (rb.linearVelocity.y < landingThreshold)
+            {
+                myAnimator.SetBool("Land", true);
+            }
+        }
+        else
+        {
+            if (rb.linearVelocity.y > landingThreshold)
+            {
+                myAnimator.SetBool("Land", false);
+            }
+            myAnimator.SetBool("Fall", false);
         }
 
         xVel = rb.linearVelocityX * velocityDecay;
@@ -175,7 +187,7 @@ public class PlayerController : MonoBehaviour
             canDash = true;
             canBubble = true;
 
-            if (collision.gameObject.CompareTag("Ground"))
+            /*if (collision.gameObject.CompareTag("Ground"))
             {
                 if (rb.linearVelocity.y < landingThreshold)
                 {
@@ -189,7 +201,7 @@ public class PlayerController : MonoBehaviour
             else if (collision.gameObject.CompareTag("Player"))
             {
                 myAnimator.SetTrigger("SoftLand");
-            }
+            }*/
 
             if (PlayerGlobals.canTeleport && PlayerGlobals.PlayerOneZone != PlayerGlobals.PlayerTwoZone)
             {
