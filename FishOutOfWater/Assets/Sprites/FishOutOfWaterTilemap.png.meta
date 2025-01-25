@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: 56505994da1d3534da867708b5b6e306
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7873212566758460451
+    second: FishOutOfWaterTilemap_0
+  - first:
+      213: -4679371197199154764
+    second: FishOutOfWaterTilemap_1
+  - first:
+      213: -392567968734176351
+    second: FishOutOfWaterTilemap_2
+  - first:
+      213: -8755940826959104801
+    second: FishOutOfWaterTilemap_3
+  - first:
+      213: 822924099229286914
+    second: FishOutOfWaterTilemap_4
+  - first:
+      213: -991963381054590760
+    second: FishOutOfWaterTilemap_5
+  - first:
+      213: -2646824551835388173
+    second: FishOutOfWaterTilemap_6
+  - first:
+      213: -8938605905007097225
+    second: FishOutOfWaterTilemap_7
+  - first:
+      213: -7261322271031468485
+    second: FishOutOfWaterTilemap_8
+  - first:
+      213: -2784156943119027880
+    second: FishOutOfWaterTilemap_9
+  - first:
+      213: 8580500259678434621
+    second: FishOutOfWaterTilemap_10
+  - first:
+      213: 1145574546101940816
+    second: FishOutOfWaterTilemap_11
+  - first:
+      213: -5185136915957230396
+    second: FishOutOfWaterTilemap_12
+  - first:
+      213: 2569303334271797243
+    second: FishOutOfWaterTilemap_13
+  - first:
+      213: 1593375983642049169
+    second: FishOutOfWaterTilemap_14
+  - first:
+      213: -315966852002165508
+    second: FishOutOfWaterTilemap_15
+  - first:
+      213: -7983603331801535096
+    second: FishOutOfWaterTilemap_16
+  - first:
+      213: -4746867136006344319
+    second: FishOutOfWaterTilemap_17
+  - first:
+      213: 5052495662026311247
+    second: FishOutOfWaterTilemap_18
+  - first:
+      213: -8098997731118150138
+    second: FishOutOfWaterTilemap_19
+  - first:
+      213: -8489356909643505449
+    second: FishOutOfWaterTilemap_20
+  - first:
+      213: 7987256892092825312
+    second: FishOutOfWaterTilemap_21
+  - first:
+      213: 871407857978906374
+    second: FishOutOfWaterTilemap_22
+  - first:
+      213: 1027417747785526185
+    second: FishOutOfWaterTilemap_23
+  - first:
+      213: 6925099783948528147
+    second: FishOutOfWaterTilemap_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 145
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd3783572eabcb290800000000000000
+      internalID: -7873212566758460451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 145
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b100c240b88f0fb0800000000000000
+      internalID: -4679371197199154764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_2
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 145
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ab176923815d8af0800000000000000
+      internalID: -392567968734176351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 127
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd433c67536ac7680800000000000000
+      internalID: -8755940826959104801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_4
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 127
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2028ba3bb1d9b6b00800000000000000
+      internalID: 822924099229286914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_5
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 127
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d0bb028f86db32f0800000000000000
+      internalID: -991963381054590760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 109
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f6b115f717944bd0800000000000000
+      internalID: -2646824551835388173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_7
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 109
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77ac7d4c941b3f380800000000000000
+      internalID: -8938605905007097225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_8
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 109
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e598bddd99a3b90800000000000000
+      internalID: -7261322271031468485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 91
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 851f376e200bc59d0800000000000000
+      internalID: -2784156943119027880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_10
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 91
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d35b745568f041770800000000000000
+      internalID: 8580500259678434621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_11
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 91
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 052b22ceaf5e5ef00800000000000000
+      internalID: 1145574546101940816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4da9c6271ba08b0800000000000000
+      internalID: -5185136915957230396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_13
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf74f7f05cff7a320800000000000000
+      internalID: 2569303334271797243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_14
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a7f9ad30fcc1610800000000000000
+      internalID: 1593375983642049169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 55
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfccc9972d57d9bf0800000000000000
+      internalID: -315966852002165508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_16
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 55
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d2854911b843190800000000000000
+      internalID: -7983603331801535096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_17
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 55
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 181bd526d7dbf1eb0800000000000000
+      internalID: -4746867136006344319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 37
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f46c74c09021e1640800000000000000
+      internalID: 5052495662026311247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_19
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 37
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e020059749a9f80800000000000000
+      internalID: -8098997731118150138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_20
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 37
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d0e0358edebf2a80800000000000000
+      internalID: -8489356909643505449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_21
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 19
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eebbf633df68de60800000000000000
+      internalID: 7987256892092825312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_22
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 19
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607115574dcd71c00800000000000000
+      internalID: 871407857978906374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_23
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 19
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab20b48ffe124e00800000000000000
+      internalID: 1027417747785526185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishOutOfWaterTilemap_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31ae2601095ea1060800000000000000
+      internalID: 6925099783948528147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 64763c5ff786f4f458db44195b1cd87e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FishOutOfWaterTilemap_0: -7873212566758460451
+      FishOutOfWaterTilemap_1: -4679371197199154764
+      FishOutOfWaterTilemap_10: 8580500259678434621
+      FishOutOfWaterTilemap_11: 1145574546101940816
+      FishOutOfWaterTilemap_12: -5185136915957230396
+      FishOutOfWaterTilemap_13: 2569303334271797243
+      FishOutOfWaterTilemap_14: 1593375983642049169
+      FishOutOfWaterTilemap_15: -315966852002165508
+      FishOutOfWaterTilemap_16: -7983603331801535096
+      FishOutOfWaterTilemap_17: -4746867136006344319
+      FishOutOfWaterTilemap_18: 5052495662026311247
+      FishOutOfWaterTilemap_19: -8098997731118150138
+      FishOutOfWaterTilemap_2: -392567968734176351
+      FishOutOfWaterTilemap_20: -8489356909643505449
+      FishOutOfWaterTilemap_21: 7987256892092825312
+      FishOutOfWaterTilemap_22: 871407857978906374
+      FishOutOfWaterTilemap_23: 1027417747785526185
+      FishOutOfWaterTilemap_24: 6925099783948528147
+      FishOutOfWaterTilemap_3: -8755940826959104801
+      FishOutOfWaterTilemap_4: 822924099229286914
+      FishOutOfWaterTilemap_5: -991963381054590760
+      FishOutOfWaterTilemap_6: -2646824551835388173
+      FishOutOfWaterTilemap_7: -8938605905007097225
+      FishOutOfWaterTilemap_8: -7261322271031468485
+      FishOutOfWaterTilemap_9: -2784156943119027880
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -69,8 +69,13 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         GameObject controls = GameObject.FindGameObjectWithTag("Controls");
-        ControlScheme cs = controls.GetComponent<ControlScheme>();
         PlayerInput pi = GetComponent<PlayerInput>();
+        if (controls == null)
+        {
+            pi.SwitchCurrentControlScheme(Keyboard.current, Mouse.current);
+            return;
+        }
+        ControlScheme cs = controls.GetComponent<ControlScheme>();
         if (cs.UsingKeyboardControls(playerNumber))
         {
             pi.SwitchCurrentControlScheme(Keyboard.current, Mouse.current);
