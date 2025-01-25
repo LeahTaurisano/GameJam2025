@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2498665265858028049}
   - component: {fileID: 4549866232510355018}
   - component: {fileID: 4495289003223336959}
+  - component: {fileID: 5101083899384905001}
   m_Layer: 6
   m_Name: Bubble
   m_TagString: Bubble
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 1974398850317261453, guid: dc1b4daef25a11540a85b467e15a9d72, type: 3}
+  m_Sprite: {fileID: -1446071448314316912, guid: 5434f44c081731943bf3e9f558019435, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,6 +126,28 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!95 &5101083899384905001
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280236347089439463}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3615a390d7395be44801aba0e608d232, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2524000928770836367
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +349,7 @@ MonoBehaviour:
   myAnimator: {fileID: 3736333574210365458}
   fallingThreshold: -0.5
   landingThreshold: -6
+  bubbleAnimationSpeedMult: 2.5
 --- !u!114 &6315892122454068990
 MonoBehaviour:
   m_ObjectHideFlags: 0

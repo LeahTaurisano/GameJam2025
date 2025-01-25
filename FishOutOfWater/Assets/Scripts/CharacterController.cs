@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float fallingThreshold = -0.5f;
     [SerializeField] public float landingThreshold = -6.0f;
 
+    //Bubble Animation Implement
+    [SerializeField] public float bubbleAnimationSpeedMult = 1.0f;
+
 
     enum PlayerState
     {
@@ -61,6 +64,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
+    private Animator bubbleAnimator;
 
     private void Awake()
     {
@@ -87,6 +91,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         gravityScale = rb.gravityScale;
+        bubbleAnimator = bubbleObject.GetComponent<Animator>();
     }
 
     #region Movement
@@ -270,12 +275,18 @@ public class PlayerController : MonoBehaviour
         if (CompareState(PlayerState.Bubbled))
         {
             bubbleTimer += Time.fixedDeltaTime;
+            bubbleAnimator.speed = (bubbleTimer / bubbleAnimationSpeedMult);
+            if (bubbleTimer > (bubbleDuration - 0.15))
+            {
+                bubbleAnimator.speed = 1.0f;
+                bubbleAnimator.SetTrigger("Pop");
+            }
             if (bubbleTimer > bubbleDuration)
             {
-                bubbleObject.SetActive(false);
                 ChangeState(PlayerState.Airborne);
+                bubbleObject.SetActive(false);
                 myAnimator.SetBool("Bubble", false);
-                bubbleTimer = 0.0f;
+                bubbleTimer = 0.0f;                
             }
         }
         else if (tryBubble && canBubble)
