@@ -60,6 +60,6 @@ public class CameraFollow : MonoBehaviour
             bound.Encapsulate(players[i].position);
         }
 
-        return bound.size.x;
+        return Mathf.Max(bound.size.x, bound.size.y);
     }
 }
