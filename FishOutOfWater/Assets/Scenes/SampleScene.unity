@@ -743,8 +743,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1abac6a051e070c4fa5f82fd3141513a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 1438464758}
-  speed: 5
+  playerNumber: 0
+  moveSpeed: 0
+  jumpForce: 0
+  dashSpeed: 0
+  dashDuration: 0
+  bubbleObject: {fileID: 0}
+  bubbleSpeed: 0
+  bubbleMoveSpeedCap: 0
+  bubbleFloatSpeed: 0
+  bubbleDuration: 0
+  dashBubblePenalty: 0
+  velocityDecay: 0
+  otherPlayer: {fileID: 0}
+  myAnimator: {fileID: 0}
+  fallingThreshold: -0.5
+  landingThreshold: -6
+  bubbleAnimationSpeedMult: 1
+  interactCooldown: 1
 --- !u!50 &1438464758
 Rigidbody2D:
   serializedVersion: 5

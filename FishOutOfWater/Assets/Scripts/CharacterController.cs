@@ -199,7 +199,6 @@ public class PlayerController : MonoBehaviour
         Interact();
         if (this.gameObject.transform.position.y < (otherPlayer.gameObject.transform.position.y - 20))
         {
-            Debug.Log("Player Can Teleport");
             playerCanTeleport = true;
         }
         rb.linearVelocity = new Vector2(xVel, yVel);
