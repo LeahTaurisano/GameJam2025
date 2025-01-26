@@ -74,7 +74,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""ShowControlMap"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Button"",
                     ""id"": ""f9b34c3f-157b-42bf-bb47-ea40520cf319"",
                     ""expectedControlType"": """",
                     ""processors"": """",
