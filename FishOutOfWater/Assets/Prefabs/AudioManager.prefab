@@ -178,16 +178,9 @@ MonoBehaviour:
   _SFXSource: {fileID: 5264286410115375240}
   _musicSource: {fileID: 2767427751462656758}
   MusicTracks:
-  - {fileID: 8300000, guid: c59e74fe212b7544c88157bb7f5d4991, type: 3}
-  - {fileID: 8300000, guid: 71ef49260f5dc494da2d4f9283d6e4c1, type: 3}
-  - {fileID: 8300000, guid: dec00565db80a89428bb190b330c37aa, type: 3}
-  - {fileID: 8300000, guid: 5a22829bcd3f38246b5b9a0b3431b334, type: 3}
-  - {fileID: 8300000, guid: 9e2e4f56075732948925188e78290ef0, type: 3}
-  - {fileID: 8300000, guid: 6222f220dda77724db4df37e05f7d3e5, type: 3}
-  - {fileID: 8300000, guid: c78e84aeaed343246b617b0272a3d458, type: 3}
-  - {fileID: 8300000, guid: 17619b0cf6d14174f85cc984da311884, type: 3}
-  - {fileID: 8300000, guid: 2190c1889a324cf489d53df37218373e, type: 3}
-  - {fileID: 8300000, guid: 835eb17a1c207b24a87251aa057957ce, type: 3}
+  - {fileID: 8300000, guid: 0415453c2a17dce46a7482a924cef1f4, type: 3}
+  - {fileID: 8300000, guid: 8d0871747a8fa9949b8bca31aa4cc23e, type: 3}
+  - {fileID: 8300000, guid: c9167ecd3d4ad394789720341e974c07, type: 3}
 --- !u!1 &9113265570783226219
 GameObject:
   m_ObjectHideFlags: 0

@@ -964,6 +964,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d23fdbc17d3f04883b4ec4041c3064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walk: {fileID: 8300000, guid: aa26fa21b663c40449d3275c9c2c6854, type: 3}
-  volume: 0.005
+  walk: {fileID: 8300000, guid: 2d3ecf6146285494889c9f97814f9c25, type: 3}
+  volume: 0.1
   audioSource: {fileID: -1066772404524322218}
