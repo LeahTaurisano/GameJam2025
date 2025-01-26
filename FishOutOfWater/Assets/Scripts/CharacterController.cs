@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour
     //Bubble Animation Implement
     [SerializeField] public float bubbleAnimationSpeedMult = 1.0f;
 
+    //Interaction Cooldown
+    [SerializeField] private float interactCooldown = 1.0f;
+
 
     enum PlayerState
     {
@@ -60,11 +63,16 @@ public class PlayerController : MonoBehaviour
     private float xVel = 0.0f;
     private float yVel = 0.0f;
 
+    private bool tryInteract = false;
+    private bool nearLever = false;
+    private GameObject currentLever;
+
     private float gravityScale;
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private Animator bubbleAnimator;
+    private float interactTimer = 0;
 
     private void Awake()
     {
@@ -97,6 +105,7 @@ public class PlayerController : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         gravityScale = rb.gravityScale;
         bubbleAnimator = bubbleObject.GetComponent<Animator>();
+        interactTimer = interactCooldown;
     }
 
     #region Movement
@@ -126,6 +135,11 @@ public class PlayerController : MonoBehaviour
     public void BubbleInput(InputAction.CallbackContext context)
     {
         tryBubble = context.performed;
+    }
+    public void InteractInput(InputAction.CallbackContext context)
+    {
+        tryInteract = context.performed;
+
     }
     #endregion
     private void FixedUpdate()
@@ -166,7 +180,10 @@ public class PlayerController : MonoBehaviour
                 canDash = true;
             }
         }
-
+        if (interactTimer > 0)
+        {
+            interactTimer -= Time.fixedDeltaTime;
+        }
         if (CompareState(PlayerState.Grounded))
         {
             xVel = 0.0f;
@@ -176,6 +193,7 @@ public class PlayerController : MonoBehaviour
         Jump();
         Dash();
         Bubble();
+        Interact();
         rb.linearVelocity = new Vector2(xVel, yVel);
     }
 
@@ -211,6 +229,21 @@ public class PlayerController : MonoBehaviour
             ChangeState(PlayerState.Bouncing);
             rb.linearVelocityY = jumpForce;
         }
+        else if (collision.gameObject.CompareTag("Lever"))
+        {
+            nearLever = true;
+            currentLever = collision.gameObject;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        nearLever = false;
+        currentLever = null;
+
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        
     }
 
     private void Move()
@@ -302,5 +335,17 @@ public class PlayerController : MonoBehaviour
             canBubble = false;
         }
         tryBubble = false;
+    }
+
+    private void Interact()
+    {
+        if(tryInteract && nearLever && interactTimer <= 0)
+        {
+           
+                currentLever.GetComponent<Lever>().touched = true;
+                interactTimer = interactCooldown;
+                tryInteract = false;
+            
+        }
     }
 }
