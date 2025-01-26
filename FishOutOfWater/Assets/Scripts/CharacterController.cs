@@ -194,7 +194,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (rb.linearVelocity.y >= 0.0f)
+            if (rb.linearVelocity.y >= 0.001f)
             {
                 myAnimator.SetBool("Land", false);
             }
