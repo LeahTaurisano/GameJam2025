@@ -229,7 +229,7 @@ public class PlayerController : MonoBehaviour
             ChangeState(PlayerState.Bouncing);
             rb.linearVelocityY = jumpForce;
         }
-        else if (collision.gameObject.CompareTag("Lever"))
+        if (collision.gameObject.CompareTag("Lever"))
         {
             nearLever = true;
             currentLever = collision.gameObject;
@@ -321,10 +321,7 @@ public class PlayerController : MonoBehaviour
             }
             if (bubbleTimer > bubbleDuration)
             {
-                ChangeState(PlayerState.Airborne);
-                bubbleObject.SetActive(false);
-                myAnimator.SetBool("Bubble", false);
-                bubbleTimer = 0.0f;                
+                PopBubble();
             }
         }
         else if (tryBubble && canBubble)
@@ -347,5 +344,13 @@ public class PlayerController : MonoBehaviour
                 tryInteract = false;
             
         }
+    }
+
+    public void PopBubble()
+    {
+        ChangeState(PlayerState.Airborne);
+        bubbleObject.SetActive(false);
+        myAnimator.SetBool("Bubble", false);
+        bubbleTimer = 0.0f;
     }
 }
