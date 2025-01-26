@@ -123786,6 +123786,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1087285888}
     - target: {fileID: 8545540923549621400, guid: 21f030e712b2e4448bb2dd5fea8e2266, type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 1373443508}
+    - target: {fileID: 8545540923549621400, guid: 21f030e712b2e4448bb2dd5fea8e2266, type: 3}
       propertyPath: landingThreshold
       value: -6
       objectReference: {fileID: 0}
@@ -123829,6 +123833,10 @@ PrefabInstance:
       propertyPath: myAnimator
       value: 
       objectReference: {fileID: 1438464756}
+    - target: {fileID: 2398104126167522688, guid: 3320f358362f0aa4eb1d7686958967d7, type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 1087285880}
     - target: {fileID: 2398104126167522688, guid: 3320f358362f0aa4eb1d7686958967d7, type: 3}
       propertyPath: landingThreshold
       value: -6

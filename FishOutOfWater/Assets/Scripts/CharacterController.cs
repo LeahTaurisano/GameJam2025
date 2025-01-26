@@ -74,6 +74,8 @@ public class PlayerController : MonoBehaviour
     private Animator bubbleAnimator;
     private float interactTimer = 0;
 
+    private bool playerCanTeleport = false;
+
     private void Awake()
     {
         GameObject controls = GameObject.FindGameObjectWithTag("Controls");
@@ -106,6 +108,7 @@ public class PlayerController : MonoBehaviour
         gravityScale = rb.gravityScale;
         bubbleAnimator = bubbleObject.GetComponent<Animator>();
         interactTimer = interactCooldown;
+        
     }
 
     #region Movement
@@ -194,6 +197,11 @@ public class PlayerController : MonoBehaviour
         Dash();
         Bubble();
         Interact();
+        if (this.gameObject.transform.position.y < (otherPlayer.gameObject.transform.position.y - 20))
+        {
+            Debug.Log("Player Can Teleport");
+            playerCanTeleport = true;
+        }
         rb.linearVelocity = new Vector2(xVel, yVel);
     }
 
@@ -215,12 +223,12 @@ public class PlayerController : MonoBehaviour
             canDash = true;
             canBubble = true;           
 
-            if (PlayerGlobals.canTeleport && PlayerGlobals.PlayerOneZone != PlayerGlobals.PlayerTwoZone)
+            if (playerCanTeleport)
             {
-                if (this.gameObject.transform.position.y < otherPlayer.gameObject.transform.position.y)
+                if (this.gameObject.transform.position.y < (otherPlayer.gameObject.transform.position.y - 20))
                 {
                     otherPlayer.transform.position = this.gameObject.transform.position + offset;
-                    PlayerGlobals.canTeleport = false;
+                    playerCanTeleport = false;
                 }                
             }            
         }
