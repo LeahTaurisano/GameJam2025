@@ -131,13 +131,24 @@ public class PlayerController : MonoBehaviour
     public void MoveInput(InputAction.CallbackContext context)
     {
         moveInputX = context.ReadValue<Vector2>().x;
+
         if (moveInputX < 0)
         {
+            if (moveInputX > -0.5f)
+            {
+                moveInputX = 0.0f;
+                return;
+            }
             moveInputX = -1;
             sr.flipX = true;
         }
         else if (moveInputX > 0)
         {
+            if (moveInputX < 0.5f)
+            {
+                moveInputX = 0.0f;
+                return;
+            }
             moveInputX = 1;
             sr.flipX = false;
         }
