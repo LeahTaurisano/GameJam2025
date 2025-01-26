@@ -433,17 +433,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d60c22fb-3637-48f1-b5fa-a69de7be9fad"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ShowControlMap"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""8b31fac0-10a6-470d-93e8-467fc9d33ff8"",
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
