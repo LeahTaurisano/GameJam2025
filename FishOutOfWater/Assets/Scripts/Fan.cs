@@ -34,7 +34,7 @@ public class Fan : MonoBehaviour
                 }
                 if (fanDirection == WindDirection.Down)
                 {
-                    playerRb.AddForceY(-playerDirection.y * airForce);
+                    playerRb.AddForceY(playerDirection.y * airForce);
                 }
                 if (fanDirection == WindDirection.Right)
                 {
@@ -42,7 +42,7 @@ public class Fan : MonoBehaviour
                 }
                 if (fanDirection == WindDirection.Left)
                 {
-                    playerRb.AddForceX(-playerDirection.x * airForce);
+                    playerRb.AddForceX(playerDirection.x * airForce);
                 }
             }
         
