@@ -43,7 +43,7 @@ Material:
     m_Floats:
     - _Border: 1000
     - _EnableExternalAlpha: 0
-    - _Near: 0.4
+    - _Near: 0.37
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
