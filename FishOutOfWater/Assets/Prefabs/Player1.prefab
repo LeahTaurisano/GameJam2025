@@ -320,7 +320,8 @@ GameObject:
   - component: {fileID: 5840129881278034070}
   - component: {fileID: 6945482636802716173}
   - component: {fileID: 123076792648140771}
-  - component: {fileID: 3736333574210365458}
+  - component: {fileID: 5307442863702338877}
+  - component: {fileID: 7802253965491086064}
   m_Layer: 7
   m_Name: Player1
   m_TagString: Player
@@ -389,7 +390,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6392564439742343200, guid: 003edcf8644161e46b19b903f18a1515, type: 3}
+  m_Sprite: {fileID: -1537365249, guid: 6fb94390843cce849a51ea3084c66907, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -425,11 +426,12 @@ MonoBehaviour:
   dashBubblePenalty: 2.5
   velocityDecay: 0.99
   otherPlayer: {fileID: 6563627590508110630, guid: 21f030e712b2e4448bb2dd5fea8e2266, type: 3}
-  myAnimator: {fileID: 3736333574210365458}
+  myAnimator: {fileID: 7802253965491086064}
   fallingThreshold: -0.5
   landingThreshold: -6
   bubbleAnimationSpeedMult: 2.5
   interactCooldown: 0.2
+  menu: {fileID: 0}
 --- !u!114 &6315892122454068990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,6 +466,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9100000, guid: 50e98df67e9f722409044a5750e7cf11, type: 2}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -595,8 +609,16 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: ce436760-6334-41ac-a5ec-cdf0226fd82a
     m_ActionName: 'Player2/Bubble[/Keyboard/r]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f9b34c3f-157b-42bf-bb47-ea40520cf319
+    m_ActionName: 'Player1/ShowControlMap[/XInputControllerWindows/start,/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bb91a372-8389-4581-9a8e-52054d3c4bcd
+    m_ActionName: 'Player2/ShowControlMap[/XInputControllerWindows/start,/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -665,7 +687,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 1.6}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -707,17 +729,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0007112026, y: -0.69883066}
+  m_Offset: {x: -0.00020052493, y: -0.69883066}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 1.6}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.60071564, y: 0.20189941}
+  m_Size: {x: 0.400736, y: 0.20189941}
   m_EdgeRadius: 0
 --- !u!61 &123076792648140771
 BoxCollider2D:
@@ -753,19 +775,55 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0007930994, y: 0.34465757}
+  m_Offset: {x: -0.00021153688, y: -0.6996531}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 1.6}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.3963106, y: 0.70315784}
+  m_Size: {x: 0.6000719, y: 0.19665968}
   m_EdgeRadius: 0
---- !u!95 &3736333574210365458
+--- !u!58 &5307442863702338877
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2561659718654348928}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: db326482ad004734f878f76be9028b1b, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.02634092, y: 0.18443273}
+  m_Radius: 0.5760567
+--- !u!95 &7802253965491086064
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
