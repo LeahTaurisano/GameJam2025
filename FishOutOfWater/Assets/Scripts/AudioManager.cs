@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class AudioManager : MonoBehaviour
 {
@@ -12,8 +13,9 @@ public class AudioManager : MonoBehaviour
     #endregion
 
     #region SoundBank
-    [SerializeField] private AudioClip[] MusicTracks;
+    public AudioClip[] MusicTracks;
     #endregion
+    bool firstSong = true;
 
     private void Awake()
     {
@@ -43,7 +45,6 @@ public class AudioManager : MonoBehaviour
 
 
         _SFXSource.Play();
-
     }
     public void PlayScalingSoundEffect(AudioClip audioClip, float volume, float maxAudioScale, float scaleSpeedMult = 1f, bool pitchVariance = true)
     {
@@ -62,13 +63,26 @@ public class AudioManager : MonoBehaviour
 
     }
     //add a way to modify the sound playing
-    public void PlayGlobalMusic(AudioClip audioClip, float volume, bool looping = true)
+    public void PlayGlobalMusic(AudioClip[] audioClip, float volume)
     {
+        int randClip;
+        do
+        {
+            randClip = Random.Range(0, audioClip.Length);
+        }
+        while (_musicSource.clip == audioClip[randClip]);
 
-        _musicSource.clip = audioClip;
+
+        _musicSource.clip = audioClip[randClip];
         _musicSource.volume = volume;
-        _musicSource.loop = looping;
 
+
+        if (firstSong)
+        {
+            _musicSource.volume = 0.002f;
+            StartCoroutine(ScalingAudio(_musicSource, _musicSource.clip, volume));
+            firstSong = false;
+        }
         _musicSource.Play();
     }
 
@@ -175,7 +189,7 @@ public class AudioManager : MonoBehaviour
     IEnumerator BigFall(float fallTime)
     {
         float OriginalVolume = _musicSource.volume;
-        _musicSource.volume /= fallTime * 2;
+        _musicSource.volume /= fallTime;
         _musicSource.priority = 250;
 
         yield return new WaitForSeconds(fallTime);
@@ -183,6 +197,7 @@ public class AudioManager : MonoBehaviour
         StartCoroutine(ScalingAudio(_musicSource, _musicSource.clip, OriginalVolume, 0.5f));
 
         _musicSource.priority = 128;
+        yield return null;
     }
 
     IEnumerator ScalingAudio(AudioSource source, AudioClip audioClip, float maxAudio, float speedMult = 1f)
@@ -199,29 +214,31 @@ public class AudioManager : MonoBehaviour
                 yield break;
             }
         }
+        yield return null;
     }
     IEnumerator FadeAudio(AudioSource source, AudioClip audioClip)
     {
 
-        while (source.volume > 0)
+        while (source.volume > 0.002)
         {
             yield return new WaitForSeconds(0.2f);
             if (source.isPlaying && source.clip == audioClip)
             {
                 source.volume -= source.volume / 4;
             }
-            else
+            else if (source.clip != audioClip)
             {
-                source.Stop();
                 yield break;
             }
         }
+        source.Stop();
+        yield return null;
     }
     IEnumerator ResetSpatialBlend(AudioSource source)
     {
         yield return new WaitForSeconds(1f);
         source.spatialBlend = 1f;
-
+        yield return null;
     }
     #endregion
 }

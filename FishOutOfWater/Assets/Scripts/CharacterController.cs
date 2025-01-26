@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     //Player Teleport Implement
     [SerializeField] private GameObject otherPlayer;
-    private Vector3 offset = new Vector3( 0.0f, 2.0f, 0.0f );
+    private Vector3 offset = new Vector3(0.0f, 2.0f, 0.0f);
 
     //Player Animation Implement
     [SerializeField] public Animator myAnimator;
@@ -32,13 +32,23 @@ public class PlayerController : MonoBehaviour
 
     //Bubble Animation Implement
     [SerializeField] public float bubbleAnimationSpeedMult = 1.0f;
+    [Space]
 
     //Interaction Cooldown
     [SerializeField] private float interactCooldown = 1.0f;
 
     //Control Screen
     [SerializeField] public GameObject menu;
-
+    [Space]
+    //SFX the player can play
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] private AudioClip bubbleForming;
+    [SerializeField] private AudioClip bubblePop;
+    [SerializeField] private AudioClip bubbleBounce;
+    [SerializeField] private AudioClip jump;
+    [SerializeField] private AudioClip fishDash;
+    [SerializeField] private AudioClip bubbleDash;
+    [SerializeField] private AudioClip leverFlick;
     enum PlayerState
     {
         Grounded,
@@ -124,7 +134,7 @@ public class PlayerController : MonoBehaviour
         gravityScale = rb.gravityScale;
         bubbleAnimator = bubbleObject.GetComponent<Animator>();
         interactTimer = interactCooldown;
-        
+
     }
 
     #region Movement
@@ -152,16 +162,16 @@ public class PlayerController : MonoBehaviour
             moveInputX = 1;
             sr.flipX = false;
         }
-   
+
     }
     public void JumpInput(InputAction.CallbackContext context)
     {
         tryJump = context.performed;
-    }    
+    }
     public void DashInput(InputAction.CallbackContext context)
     {
         tryDash = context.performed;
-    }    
+    }
     public void BubbleInput(InputAction.CallbackContext context)
     {
         tryBubble = context.performed;
@@ -187,6 +197,7 @@ public class PlayerController : MonoBehaviour
             if (rb.linearVelocity.y > landingThreshold)
             {
                 myAnimator.SetBool("Land", false);
+
             }
             myAnimator.SetBool("Fall", false);
         }
@@ -244,10 +255,10 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if ((collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Player")) && !CompareState(PlayerState.Bubbled))
-        {           
+        {
             ChangeState(PlayerState.Grounded);
             canDash = true;
-            canBubble = true;           
+            canBubble = true;
 
             if (playerCanTeleport)
             {
@@ -255,13 +266,14 @@ public class PlayerController : MonoBehaviour
                 {
                     otherPlayer.transform.position = this.gameObject.transform.position + offset;
                     playerCanTeleport = false;
-                }                
-            }            
+                }
+            }
         }
         else if (collision.gameObject.CompareTag("BubbleBounce"))
         {
             ChangeState(PlayerState.Bouncing);
             rb.linearVelocityY = jumpForce;
+            AudioManager.instance.PlaySoundEffect(audioSource, bubbleBounce, 0.8f);
         }
         if (collision.gameObject.CompareTag("Lever"))
         {
@@ -277,7 +289,14 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
+
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (CompareState(PlayerState.Bubbled))
+        {
+            AudioManager.instance.PlaySoundEffect(audioSource, bubbleBounce, 0.6f);
+        }
     }
 
     private void Move()
@@ -296,7 +315,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             if (myAnimator.GetBool("Run"))
-            { 
+            {
                 myAnimator.SetBool("Run", false);
             }
         }
@@ -317,10 +336,11 @@ public class PlayerController : MonoBehaviour
         {
             myAnimator.SetTrigger("Jump");
             yVel = jumpForce;
+            AudioManager.instance.PlayOneShotSoundEffect(jump, 0.8f, gameObject.transform.position);
             ChangeState(PlayerState.Airborne);
         }
         tryJump = false;
-    }    
+    }
     private void Dash()
     {
         if (tryDash && canDash)
@@ -333,10 +353,13 @@ public class PlayerController : MonoBehaviour
             if (CompareState(PlayerState.Bubbled))
             {
                 bubbleTimer += dashBubblePenalty;
+                AudioManager.instance.PlayOneShotSoundEffect(bubbleDash, 1f, gameObject.transform.position);
             }
             else
             {
                 myAnimator.SetTrigger("Dash");
+                AudioManager.instance.PlayOneShotSoundEffect(fishDash, 0.8f, gameObject.transform.position);
+
             }
         }
         tryDash = false;
@@ -352,6 +375,7 @@ public class PlayerController : MonoBehaviour
             {
                 bubbleAnimator.speed = 1.0f;
                 bubbleAnimator.SetTrigger("Pop");
+                AudioManager.instance.PlaySoundEffect(audioSource, bubblePop, 0.5f);
             }
             if (bubbleTimer > bubbleDuration)
             {
@@ -364,19 +388,20 @@ public class PlayerController : MonoBehaviour
             ChangeState(PlayerState.Bubbled);
             myAnimator.SetBool("Bubble", true);
             canBubble = false;
+            AudioManager.instance.PlaySoundEffect(audioSource, bubbleForming, 0.5f);
         }
         tryBubble = false;
     }
 
     private void Interact()
     {
-        if(tryInteract && nearLever && interactTimer <= 0)
+        if (tryInteract && nearLever && interactTimer <= 0)
         {
-           
-                currentLever.GetComponent<Lever>().touched = true;
-                interactTimer = interactCooldown;
-                tryInteract = false;
-            
+
+            currentLever.GetComponent<Lever>().touched = true;
+            interactTimer = interactCooldown;
+            tryInteract = false;
+            AudioManager.instance.PlayOneShotSoundEffect(leverFlick, 0.8f, gameObject.transform.position);
         }
     }
 
@@ -390,7 +415,7 @@ public class PlayerController : MonoBehaviour
 
     public void ShowMenu()
     {
-        Debug.Log("Set Menu Active!");        
+        Debug.Log("Set Menu Active!");
         menu.gameObject.SetActive(!menu.gameObject.activeSelf);
     }
 }

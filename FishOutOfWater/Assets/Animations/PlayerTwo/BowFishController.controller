@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 0def371798eefaf458c77aa49e54d569, type: 3}
-  volume: 0.3
+  volume: 0.2
   globalPercent: 0.7
 --- !u!1102 &1546029552390308488
 AnimatorState:
