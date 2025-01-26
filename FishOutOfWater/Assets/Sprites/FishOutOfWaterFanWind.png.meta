@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FishOutOfWaterFanWind_0: -7711097524838690672
+      FishOutOfWaterFanWind_1: -3230480052601217739
+      FishOutOfWaterFanWind_2: 6698821578361833272
+      FishOutOfWaterFanWind_3: -4806011184140290143
+      FishOutOfWaterFanWind_4: 7363158523473354093
+      FishOutOfWaterFanWind_5: -2605188950668890905
+      FishOutOfWaterFanWind_6: 5994584683492800729
+      FishOutOfWaterFanWind_7: -651604771912812407
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
