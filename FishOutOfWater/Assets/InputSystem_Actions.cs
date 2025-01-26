@@ -71,6 +71,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Press"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ShowControlMap"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""f9b34c3f-157b-42bf-bb47-ea40520cf319"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -282,6 +291,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fe2dde60-a3ee-4f0d-93c0-204b67b762e4"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ShowControlMap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7006ffca-04ac-471c-b056-354f2d2a048d"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ShowControlMap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -332,6 +363,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ShowControlMap"",
+                    ""type"": ""Button"",
+                    ""id"": ""bb91a372-8389-4581-9a8e-52054d3c4bcd"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 }
             ],
@@ -399,6 +439,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Joystick"",
                     ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5125f13e-4bc3-4571-aa91-68e750cf576b"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ShowControlMap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d60c22fb-3637-48f1-b5fa-a69de7be9fad"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ShowControlMap"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1112,6 +1174,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player1_Jump = m_Player1.FindAction("Jump", throwIfNotFound: true);
         m_Player1_Dash = m_Player1.FindAction("Dash", throwIfNotFound: true);
         m_Player1_Bubble = m_Player1.FindAction("Bubble", throwIfNotFound: true);
+        m_Player1_ShowControlMap = m_Player1.FindAction("ShowControlMap", throwIfNotFound: true);
         // Player2
         m_Player2 = asset.FindActionMap("Player2", throwIfNotFound: true);
         m_Player2_Move = m_Player2.FindAction("Move", throwIfNotFound: true);
@@ -1119,6 +1182,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player2_Jump = m_Player2.FindAction("Jump", throwIfNotFound: true);
         m_Player2_Dash = m_Player2.FindAction("Dash", throwIfNotFound: true);
         m_Player2_Bubble = m_Player2.FindAction("Bubble", throwIfNotFound: true);
+        m_Player2_ShowControlMap = m_Player2.FindAction("ShowControlMap", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1204,6 +1268,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player1_Jump;
     private readonly InputAction m_Player1_Dash;
     private readonly InputAction m_Player1_Bubble;
+    private readonly InputAction m_Player1_ShowControlMap;
     public struct Player1Actions
     {
         private @InputSystem_Actions m_Wrapper;
@@ -1213,6 +1278,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Player1_Jump;
         public InputAction @Dash => m_Wrapper.m_Player1_Dash;
         public InputAction @Bubble => m_Wrapper.m_Player1_Bubble;
+        public InputAction @ShowControlMap => m_Wrapper.m_Player1_ShowControlMap;
         public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1237,6 +1303,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Bubble.started += instance.OnBubble;
             @Bubble.performed += instance.OnBubble;
             @Bubble.canceled += instance.OnBubble;
+            @ShowControlMap.started += instance.OnShowControlMap;
+            @ShowControlMap.performed += instance.OnShowControlMap;
+            @ShowControlMap.canceled += instance.OnShowControlMap;
         }
 
         private void UnregisterCallbacks(IPlayer1Actions instance)
@@ -1256,6 +1325,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Bubble.started -= instance.OnBubble;
             @Bubble.performed -= instance.OnBubble;
             @Bubble.canceled -= instance.OnBubble;
+            @ShowControlMap.started -= instance.OnShowControlMap;
+            @ShowControlMap.performed -= instance.OnShowControlMap;
+            @ShowControlMap.canceled -= instance.OnShowControlMap;
         }
 
         public void RemoveCallbacks(IPlayer1Actions instance)
@@ -1282,6 +1354,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player2_Jump;
     private readonly InputAction m_Player2_Dash;
     private readonly InputAction m_Player2_Bubble;
+    private readonly InputAction m_Player2_ShowControlMap;
     public struct Player2Actions
     {
         private @InputSystem_Actions m_Wrapper;
@@ -1291,6 +1364,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Player2_Jump;
         public InputAction @Dash => m_Wrapper.m_Player2_Dash;
         public InputAction @Bubble => m_Wrapper.m_Player2_Bubble;
+        public InputAction @ShowControlMap => m_Wrapper.m_Player2_ShowControlMap;
         public InputActionMap Get() { return m_Wrapper.m_Player2; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1315,6 +1389,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Bubble.started += instance.OnBubble;
             @Bubble.performed += instance.OnBubble;
             @Bubble.canceled += instance.OnBubble;
+            @ShowControlMap.started += instance.OnShowControlMap;
+            @ShowControlMap.performed += instance.OnShowControlMap;
+            @ShowControlMap.canceled += instance.OnShowControlMap;
         }
 
         private void UnregisterCallbacks(IPlayer2Actions instance)
@@ -1334,6 +1411,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Bubble.started -= instance.OnBubble;
             @Bubble.performed -= instance.OnBubble;
             @Bubble.canceled -= instance.OnBubble;
+            @ShowControlMap.started -= instance.OnShowControlMap;
+            @ShowControlMap.performed -= instance.OnShowControlMap;
+            @ShowControlMap.canceled -= instance.OnShowControlMap;
         }
 
         public void RemoveCallbacks(IPlayer2Actions instance)
@@ -1521,6 +1601,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnBubble(InputAction.CallbackContext context);
+        void OnShowControlMap(InputAction.CallbackContext context);
     }
     public interface IPlayer2Actions
     {
@@ -1529,6 +1610,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnBubble(InputAction.CallbackContext context);
+        void OnShowControlMap(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

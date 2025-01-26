@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     //Interaction Cooldown
     [SerializeField] private float interactCooldown = 1.0f;
 
+    //Control Screen
+    [SerializeField] public GameObject menu;
 
     enum PlayerState
     {
@@ -75,6 +77,7 @@ public class PlayerController : MonoBehaviour
     private float interactTimer = 0;
 
     private bool playerCanTeleport = false;
+
 
     private void Awake()
     {
@@ -359,5 +362,11 @@ public class PlayerController : MonoBehaviour
         bubbleObject.SetActive(false);
         myAnimator.SetBool("Bubble", false);
         bubbleTimer = 0.0f;
+    }
+
+    public void ShowMenu()
+    {
+        Debug.Log("Set Menu Active!");        
+        menu.gameObject.SetActive(!menu.gameObject.activeSelf);
     }
 }
