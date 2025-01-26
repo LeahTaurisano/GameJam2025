@@ -10,7 +10,7 @@ public class ControlScheme : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
     }
-
+    
     public bool UsingKeyboardControls(int player)
     {
         if (player == 1)
