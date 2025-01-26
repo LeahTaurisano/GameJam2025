@@ -5,6 +5,7 @@ public class ControlScheme : MonoBehaviour
 {
     private bool keyboardControlsP1 = true;
     private bool keyboardControlsP2 = true;
+    private int numPlayersUsingGamepad = 0;
 
     private void Awake()
     {
@@ -28,5 +29,19 @@ public class ControlScheme : MonoBehaviour
             return;
         }
         keyboardControlsP2 = usingKeyboard;
+    }
+
+    public int NumPlayersUsingGamepad()
+    {
+        numPlayersUsingGamepad = 0;
+        if (!keyboardControlsP1)
+        {
+            ++numPlayersUsingGamepad;
+        }
+        if (!keyboardControlsP2)
+        {
+            ++numPlayersUsingGamepad;
+        }
+        return numPlayersUsingGamepad;
     }
 }

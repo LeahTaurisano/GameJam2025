@@ -85,23 +85,36 @@ public class PlayerController : MonoBehaviour
         PlayerInput pi = GetComponent<PlayerInput>();
         if (controls == null)
         {
-            pi.SwitchCurrentControlScheme(Keyboard.current, Mouse.current);
+            pi.SwitchCurrentControlScheme(Keyboard.current, Mouse.current); //Keyboard if launched outside main menu screen
             return;
         }
         ControlScheme cs = controls.GetComponent<ControlScheme>();
         if (cs.UsingKeyboardControls(playerNumber))
         {
-            pi.SwitchCurrentControlScheme(Keyboard.current, Mouse.current);
+            pi.SwitchCurrentControlScheme(Keyboard.current, Mouse.current); //Keyboard if keyboard selected at main screen
+            return;
+        }
+        if (Gamepad.all.Count >= cs.NumPlayersUsingGamepad())
+        {
+            if (cs.NumPlayersUsingGamepad() == 1)
+            {
+                pi.SwitchCurrentControlScheme("Gamepad", Gamepad.all[0]); //Give only controller to only player who picked controller
+            }
+            else
+            {
+                pi.SwitchCurrentControlScheme("Gamepad", Gamepad.all[playerNumber - 1]); //Give respective controller to each player
+            }
+            return;
         }
         else
         {
-            if (Gamepad.all.Count >= playerNumber)
+            if (playerNumber == 1)
             {
-                pi.SwitchCurrentControlScheme("Gamepad", Gamepad.all[playerNumber - 1]);
+                pi.SwitchCurrentControlScheme("Gamepad", Gamepad.all[0]); //If both pick controller but only 1 is plugged in, give player 2 keyboard controls
                 return;
             }
-            pi.SwitchCurrentControlScheme(Keyboard.current, Mouse.current);
         }
+        pi.SwitchCurrentControlScheme(Keyboard.current, Mouse.current);
     }
 
     private void Start()
