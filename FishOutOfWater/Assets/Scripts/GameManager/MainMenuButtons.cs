@@ -1,18 +1,23 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuButtons : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI controlTextP1;
     [SerializeField] private TextMeshProUGUI controlTextP2;
+    [SerializeField] private GameObject BubbleTransition;
+    [SerializeField] private float DelayedLoadTime;
     [SerializeField] private ControlScheme cs;
     private bool keyboardControlP1 = true;
     private bool keyboardControlP2 = true;
 
     public void StartGameClick()
     {
-        SceneManager.LoadScene(1);
+        BubbleTransition.gameObject.SetActive(true);
+        StartCoroutine(DelayedLoad(DelayedLoadTime));
     }
 
     public void ExitGameClick()
@@ -46,5 +51,10 @@ public class MainMenuButtons : MonoBehaviour
         {
             controlTextP2.text = "Controller";
         }
+    }
+    IEnumerator DelayedLoad(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene(1);
     }
 }

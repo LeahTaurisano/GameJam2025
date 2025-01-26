@@ -85,6 +85,21 @@ public class AudioManager : MonoBehaviour
         }
         _musicSource.Play();
     }
+    public void PlayGlobalMusic(AudioClip audioClip, float volume)
+    {
+     
+        _musicSource.clip = audioClip;
+        _musicSource.volume = volume;
+
+
+        if (firstSong)
+        {
+            _musicSource.volume = 0.002f;
+            StartCoroutine(ScalingAudio(_musicSource, _musicSource.clip, volume));
+            firstSong = false;
+        }
+        _musicSource.Play();
+    }
 
     public void PlaySoundEffect(AudioSource source, AudioClip audioClip, float volume, bool pitchVariance = true)
     {

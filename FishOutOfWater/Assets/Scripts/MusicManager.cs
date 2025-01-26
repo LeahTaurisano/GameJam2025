@@ -1,6 +1,9 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 
 public class MusicManager : MonoBehaviour
 {
@@ -28,7 +31,7 @@ public class MusicManager : MonoBehaviour
             }
 
         }
-        if (Input.GetKeyDown(KeyCode.K) && !buffer)
+        if (Input.GetKeyDown(KeyCode.K) && !buffer )
         {
             buffer = true;
             AudioManager.instance.StopAudio(AudioManager.instance._musicSource, AudioManager.instance._musicSource.clip);
@@ -41,6 +44,7 @@ public class MusicManager : MonoBehaviour
             AudioManager.instance.PlayGlobalMusic(AudioManager.instance.MusicTracks, volume);
         }
     }
+
     IEnumerator SkipSong()
     {
         yield return new WaitForSeconds(1.5f);

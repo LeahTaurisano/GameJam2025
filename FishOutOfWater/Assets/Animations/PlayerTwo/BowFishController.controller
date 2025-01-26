@@ -65,7 +65,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 9138833e91768834da13730594eefc15, type: 3}
   volume: 0.005
-  maxVolume: 0.6
+  maxVolume: 0.55
   scaleSpeed: 3
 --- !u!1101 &-7084929239423217390
 AnimatorStateTransition:
