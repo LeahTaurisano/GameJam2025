@@ -184,23 +184,24 @@ public class PlayerController : MonoBehaviour
     #endregion
     private void FixedUpdate()
     {
-        if (rb.linearVelocity.y < fallingThreshold && !CompareState(PlayerState.Grounded))
+        if (rb.linearVelocity.y < fallingThreshold && CompareState(PlayerState.Airborne) && !CompareState(PlayerState.Bubbled))
         {
             myAnimator.SetBool("Fall", true);
             if (rb.linearVelocity.y < landingThreshold)
             {
+
                 myAnimator.SetBool("Land", true);
             }
         }
         else
         {
-            if (rb.linearVelocity.y > landingThreshold)
+            if (rb.linearVelocity.y >= 0.0f)
             {
                 myAnimator.SetBool("Land", false);
-
             }
             myAnimator.SetBool("Fall", false);
         }
+
 
         xVel = rb.linearVelocityX * velocityDecay;
 
@@ -260,6 +261,8 @@ public class PlayerController : MonoBehaviour
             canDash = true;
             canBubble = true;
 
+
+
             if (playerCanTeleport)
             {
                 if (this.gameObject.transform.position.y < (otherPlayer.gameObject.transform.position.y - 20))
@@ -281,11 +284,15 @@ public class PlayerController : MonoBehaviour
             currentLever = collision.gameObject;
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         nearLever = false;
         currentLever = null;
-
+        if (collision.gameObject.CompareTag("Ground") && !CompareState(PlayerState.Airborne) && !CompareState(PlayerState.Bubbled))
+        {
+            ChangeState(PlayerState.Airborne);
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
