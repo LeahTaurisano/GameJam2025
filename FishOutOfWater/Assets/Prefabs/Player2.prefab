@@ -378,7 +378,7 @@ MonoBehaviour:
     m_ActionId: bb91a372-8389-4581-9a8e-52054d3c4bcd
     m_ActionName: 'Player2/ShowControlMap[/XInputControllerWindows/start,/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Gamepad
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Player2
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
