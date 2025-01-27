@@ -100,7 +100,14 @@ public class PlayerController : MonoBehaviour
         ControlScheme cs = controls.GetComponent<ControlScheme>();
         if (cs.UsingKeyboardControls(playerNumber))
         {
-            pi.SwitchCurrentControlScheme(Keyboard.current, Mouse.current); //Keyboard if keyboard selected at main screen
+            if (playerNumber == 1)
+            {
+                pi.SwitchCurrentControlScheme("Keyboard&Mouse", Keyboard.current); //Keyboard if keyboard selected at main screen
+            }
+            else
+            {
+                pi.SwitchCurrentControlScheme("ArrowKeys", Keyboard.current);
+            }
             return;
         }
         if (Gamepad.all.Count >= cs.NumPlayersUsingGamepad())
