@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip fishDash;
     [SerializeField] private AudioClip bubbleDash;
     [SerializeField] private AudioClip leverFlick;
-    enum PlayerState
+    public enum PlayerState
     {
         Grounded,
         Airborne,
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         Falling,
         Bouncing
     };
-    private PlayerState currentState = PlayerState.Grounded;
+    public PlayerState currentState = PlayerState.Grounded;
     private bool tryJump = false;
 
     private bool tryDash = false;
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
     private float interactTimer = 0;
 
     private bool playerCanTeleport = false;
-
+    private PlayerController playerController;
 
     private void Awake()
     {
@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
         gravityScale = rb.gravityScale;
         bubbleAnimator = bubbleObject.GetComponent<Animator>();
         interactTimer = interactCooldown;
-
+        playerController = otherPlayer.GetComponent<PlayerController>();
     }
 
     #region Movement
@@ -261,7 +261,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Player")) && !CompareState(PlayerState.Bubbled))
+        if ((collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Player") && playerController.currentState == PlayerState.Grounded) && !CompareState(PlayerState.Bubbled))
         {
             ChangeState(PlayerState.Grounded);
             canDash = true;
