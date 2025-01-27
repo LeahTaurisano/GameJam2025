@@ -88,6 +88,8 @@ public class PlayerController : MonoBehaviour
     private bool playerCanTeleport = false;
     private PlayerController playerController;
 
+    private bool canFlipMenu = true;
+
     private void Awake()
     {
         GameObject controls = GameObject.FindGameObjectWithTag("Controls");
@@ -236,6 +238,7 @@ public class PlayerController : MonoBehaviour
         {
             xVel = 0.0f;
         }
+
         yVel = rb.linearVelocityY;
         Move();
         Jump();
@@ -428,7 +431,17 @@ public class PlayerController : MonoBehaviour
 
     public void ShowMenu()
     {
-        Debug.Log("Set Menu Active!");
-        menu.gameObject.SetActive(!menu.gameObject.activeSelf);
+        if (canFlipMenu)
+        {
+            menu.gameObject.SetActive(!menu.gameObject.activeSelf);
+            PlayerController otherPC = otherPlayer.GetComponent<PlayerController>();
+            otherPC.FlipCanUseMenu();
+            otherPC.Invoke("FlipCanUseMenu", 0.2f);
+        }
+    }
+
+    public void FlipCanUseMenu()
+    {
+        canFlipMenu = !canFlipMenu;
     }
 }
